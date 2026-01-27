@@ -1,10 +1,10 @@
 ## Handwritten Numerical Digit Classification
-Image classification using Controvolutional Neural Network, demonstrating inference pipeline with PyTorch.
+Image classification using Convolutional Neural Network, demonstrating inference pipeline with PyTorch.
 
 
 ## Project Overview
 - Task: Image Classification (from 0 to 9)
-- Model: Controvolutional Neural Network (CNN)
+- Model: Convolutional Neural Network (CNN)
 - Framework: PyTorch
 
 
