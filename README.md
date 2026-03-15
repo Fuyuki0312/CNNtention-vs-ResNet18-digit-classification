@@ -12,7 +12,7 @@ Numerical image classification using Convolutional Neural Network, illustrating 
 - A demonstration of the model is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/ModelDetectingNumber-demo
 - You may need to restart the space in order to use the model.
 - Note: Input images are grayscale and their background color should be white by default.
-![description](ModelDemonstration.jpg)
+![description]()
 
 
 
