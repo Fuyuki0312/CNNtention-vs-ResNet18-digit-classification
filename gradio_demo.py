@@ -50,7 +50,7 @@ def answer_from_model(user_input):
 
 import gradio as gr
 
-title = "God of Number\n"
+title = "Single Handwritten Numerical Digit Classification\n"
 description = "This model is built to predict a single number (0-9) drawn in the paper below.\n"
 
 main = gr.Interface(
