@@ -19,6 +19,7 @@ Numerical image classification using Convolutional Neural Network, illustrating 
 - Model reached approximately 93% accuracy on a custom dataset.
 ![description](Images/AccuracyCurve.jpg) ![description](Images/LossCurve.jpg)
 ![description](Images/ConfusionMatrix.jpg)
+(Confusion matrix collected model's prediction during validation after finishing training)
 - The model sometimes confuses digits like 0, 3, 6, 8, and 9 because they share similar rounded shapes.
 
 
