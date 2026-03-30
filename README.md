@@ -19,15 +19,15 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 ## Demonstration
 - A demonstration of the model is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/ModelDetectingNumber-demo
 - You may need to restart the space in order to use the model.
-- Note: Input images are grayscale and their background color should be white by default.
+- Note: Input images are grayscale and their background color should be white by default.  
 ![description](Images/ModelDemonstration.jpg)  
 
 
 ## Metrics
-- Model reached approximately 93% accuracy on a custom dataset.
+- Model reached approximately 93% accuracy on a custom dataset.  
 
 ![description](Images/CNNAccuracyCurve.jpg) ![description](Images/CNNLostCurve.jpg)
-![description](Images/CNNConfusionMatrix.jpg)
+![description](Images/CNNConfusionMatrix.jpg)  
 (Confusion matrix collected model's prediction during validation after finishing training)
 - The model sometimes confuses digits like 0, 3, 6, 8, and 9 because they share similar rounded shapes.  
 
