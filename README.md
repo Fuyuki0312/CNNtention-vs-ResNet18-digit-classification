@@ -1,11 +1,11 @@
 # Single Handwritten Numerical Digit Classification
-Numerical image classification using Convolutional Neural Network, illustrating the complete machine learning pipeline with PyTorch.
+Numerical image classification using Convolutional Neural Network, illustrating the complete machine learning pipeline with PyTorch.  
 
 
 ## Overview
 - Task: Handwritten Numerical Image Classification (from 0 to 9)
 - Model: Convolutional Neural Network (CNN)
-- Challenges: Building a CNN model from scratch, training the model and implementing an interactive demonstration
+- Challenges: Building a CNN model from scratch, training the model and implementing an interactive demonstration  
 
 
 ## Why choosing CNN
@@ -20,7 +20,7 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 - A demonstration of the model is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/ModelDetectingNumber-demo
 - You may need to restart the space in order to use the model.
 - Note: Input images are grayscale and their background color should be white by default.
-![description](Images/ModelDemonstration.jpg)
+![description](Images/ModelDemonstration.jpg)  
 
 
 ## Metrics
@@ -29,7 +29,7 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 ![description](Images/CNNAccuracyCurve.jpg) ![description](Images/CNNLostCurve.jpg)
 ![description](Images/CNNConfusionMatrix.jpg)
 (Confusion matrix collected model's prediction during validation after finishing training)
-- The model sometimes confuses digits like 0, 3, 6, 8, and 9 because they share similar rounded shapes.
+- The model sometimes confuses digits like 0, 3, 6, 8, and 9 because they share similar rounded shapes.  
 
 
 ## Dataset  
@@ -51,7 +51,7 @@ The dataset was manually inspected and cleaned to improve quality:
 - Some digits are visually similar (e.g., 0, 6, 8, 9), which introduces ambiguity
 
 ### Data Augmentation  
-Heavy transformations (e.g., random rotation, large scaling) were avoided to preserve digit structure.
+Heavy transformations (e.g., random rotation, large scaling) were avoided to preserve digit structure.  
 
 
 ## How to use this model
@@ -74,7 +74,7 @@ Heavy transformations (e.g., random rotation, large scaling) were avoided to pre
 ├── 8/  
 └── 9/  
 - If you only want to use the model for inference, you can import model from `model.py` with weights loaded from `ModelDetectingNumber.pth`.
-- Beisdes, `PlotConfusionMatrix.py` can be used to plot confusion matrix for current model with weights loaded from `ModelDetectingNumber.pth`.
+- Beisdes, `PlotConfusionMatrix.py` can be used to plot confusion matrix for current model with weights loaded from `ModelDetectingNumber.pth`.  
 
 ## Limitation
 - Model usually gives right predictions only when the background color of input images is white because this model was trained primarily on numerical images with white backgrounds.
