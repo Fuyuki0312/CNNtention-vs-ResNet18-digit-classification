@@ -1,11 +1,11 @@
-# Single Handwritten Numerical Digit Classification
-Numerical image classification using Convolutional Neural Network, illustrating the complete machine learning pipeline with PyTorch.  
+# Single Handwritten Numerical Digit Classification  
+A comparative study of CNN and ResNet18 for handwritten digit classification with detailed evaluation and analysis.
 
 
 ## Overview
-- Task: Handwritten Numerical Image Classification (from 0 to 9)
+- Task: Comparing CNN model built from scratch and a ResNet18 model in Handwritten Numerical Image Classification (from 0 to 9)
 - Model: Convolutional Neural Network (CNN)
-- Challenges: Building a CNN model from scratch, training the model and implementing an interactive demonstration  
+- Goal: Building a CNN model from scratch, comparing the model with ResNet18 and implementing an interactive demonstration  
 
 
 ## Why choosing CNN
@@ -17,7 +17,7 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 
 
 ## Demonstration
-- A demonstration of the model is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/ModelDetectingNumber-demo
+- A demonstration of the CNN model from scratch is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/ModelDetectingNumber-demo
 - You may need to restart the space in order to use the model.
 - Note: Input images are grayscale and their background color should be white by default.  
 ![description](Images/ModelDemonstration.jpg)  
