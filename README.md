@@ -17,7 +17,7 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 
 
 ## Demonstration
-- A demonstration of the CNN model from scratch is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/ModelDetectingNumber-demo
+- A demonstration of the CNN model from scratch is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/CNN-model-built-from-scratch
 - You may need to restart the space in order to use the model.
 - Note: Input images are grayscale and their background color should be white by default.  
 ![description](Images/ModelDemonstration.jpg)  
