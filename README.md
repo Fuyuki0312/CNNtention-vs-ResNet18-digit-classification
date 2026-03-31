@@ -5,7 +5,7 @@ A comparative study of CNN and ResNet18 for handwritten digit classification wit
 ## Overview
 - Task: Comparing CNN model built from scratch and a ResNet18 model in Handwritten Numerical Image Classification (from 0 to 9)
 - Model: Convolutional Neural Network (CNN)
-- Goal: Building a CNN model from scratch, comparing the model with ResNet18 and implementing an interactive demonstration  
+- Goal: Building a CNN model from scratch, comparing the model with ResNet18 on a custom dataset and implementing an interactive demonstration  
 
 
 ## Why choosing CNN
@@ -19,18 +19,38 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 ## Demonstration
 - A demonstration of the CNN model from scratch is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/CNN-model-built-from-scratch
 - Or for ResNet18: https://huggingface.co/spaces/Fuyuki0312/ResNet18-in-handwritten-digit-classification
-- You may need to restart the space in order to use the model.
+- The Space may need a few seconds to initialize if inactive.
 - Note: Input images are grayscale and their background color should be white by default.  
 ![description](Images/ModelDemonstration.jpg)  
 
 
 ## Metrics
-- Model reached approximately 94% accuracy on a custom dataset.  
 
-![description](Images/CNNAccuracyCurve.jpg) ![description](Images/CNNLostCurve.jpg)
+### CNN model built from scratch
+- Model reached approximately 94% accuracy.  
+
+![description](Images/CNNAccuracyCurve.jpg) ![description](Images/CNNLossCurve.jpg)
 ![description](Images/CNNConfusionMatrix.jpg)  
 (Confusion matrix collected model's prediction during validation after finishing training)
-- The model sometimes confuses digits like 0, 3, 6, 8, and 9 because they share similar rounded shapes.  
+- The model sometimes confuses digits like 0, 3, 6, 8, and 9 due to similar rounded shapes and different handwritting styles.  
+
+
+### ResNet18
+- Model reached approximately 99% accuracy.  
+![description](Images/ResNetAccuracyCurve.jpg) ![description](Images/ResNetLossCurve.jpg)
+![description](Images/ResNetConfusionMatrix.jpg)
+
+- While ResNet18 performed effectively on the dataset with reliable metrics, it may not necessarily be consistent to correctly predict real-world handwritten digits. Therefore, these metrics should be interpreted with caution.
+
+### Comparison
+![description](Images/ComparingTable.jpg)
+
+- Thanks to being pretrained on large-scale datasets, the ResNet18 model required much fewer epochs (only 3) to train, despite taking insignificantly more time to train each epoch, which was 0.67 min/epoch. This model resulted in a considerably high test accuracy, being approximately higher than 99%, without the need of transforming data into grayscale.
+- The CNN model built from scratch, on the other hand, reached an acceptable test accuracy, yet requested many times more epochs (50 epochs), leading to longer training time. After data had been transformed into grayscale, this model was train with a speed of roughly 0.4 min/epoch, achieving about 94% in test accuracy.
+- A ResNet18 model with frozen backbone is not recommended because ~81% test accuracy cannot be considered satisfactory in this handwritten digit classification. The model's backbone being frozen limited the model's ability to adapt the dataset, reducing the model's capability of understanding data's patterns.
+- Overall, the ResNet18 model outperforms the custom CNN model with noticeably less total time to train in this project, although ResNet18 model requires slightly more computational resoures.  
+
+Note: The ResNet18 model with a frozen backbone as well as the relating graphs representing its metrics are not included in this repository, as it exhibited unstable training behavior and poor generalization.  
 
 
 ## Dataset  
@@ -55,7 +75,8 @@ The dataset was manually inspected and cleaned to improve quality:
 Heavy transformations (e.g., random rotation, large scaling) were avoided to preserve digit structure.  
 
 
-## How to use this model
+## How to use the models
+Note: before following the instruction below, you may want to click folder `CNN model from scratch` or `ResNet18` first.
 - If you wish to continue to train the existing model, consider to run the `train.py` with both `ModelDetectingNumber.pth` and `model.py` in the same directory. Hyperparameters in files can be changed to suit your need. Besides, if you wish to train a completely new model, simply delete or move file `ModelDetectingNumber.pth` away. When `ModelDetectingNumber.pth` is not found, `train.py` will automatically initialize a new model with architecture based on `model.py`.
 - The dataset, used for training, should be put in the same directory with `train.py` under a folder named `numbers`, with the following structure:  
 `numbers`/  
@@ -78,10 +99,10 @@ Heavy transformations (e.g., random rotation, large scaling) were avoided to pre
 - Beisdes, `PlotConfusionMatrix.py` can be used to plot confusion matrix for current model with weights loaded from `ModelDetectingNumber.pth`.  
 
 ## Limitation
-- Model usually gives right predictions only when the background color of input images is white because this model was trained primarily on numerical images with white backgrounds.
-- If the input image is not so clear or handwritting is bad, the model may confidently produce a wrong prediction.
+- The models usually give right predictions only when the background color of input images is white because the models were trained primarily on numerical images with white backgrounds.
+- When the input image is ambiguous or low-quality, the models may confidently produce a wrong prediction.
 
 
 ## Possible Improvements
-- Expanding the dataset to include numerical images with diverse backgrounds (dark, textured, etc).
-- Add more numerical images with bad handwritting to dataset.
+- Expanding the dataset to include numerical images with diverse backgrounds (dark, textured, etc) might be a solution to enable models to predict images with black background and white digit.
+- Since some digits have more than one handwritting style, adding more numerical images written in a wide range of styles to the dataset can help models become more familiar with human-like digits.
