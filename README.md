@@ -27,7 +27,7 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 ## Metrics
 
 ### CNN model built from scratch
-- Model reached approximately 94% accuracy.  
+- Model reached approximately 94% test accuracy.  
 
 ![description](Images/CNNAccuracyCurve.jpg) ![description](Images/CNNLossCurve.jpg)
 ![description](Images/CNNConfusionMatrix.jpg)  
@@ -36,11 +36,11 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 
 
 ### ResNet18
-- Model reached approximately 99% accuracy.  
+- Model reached approximately 99% test accuracy.  
 ![description](Images/ResNetAccuracyCurve.jpg) ![description](Images/ResNetLossCurve.jpg)
 ![description](Images/ResNetConfusionMatrix.jpg)
 
-(the figure collect metrics each poch and since the ResNet18 model was trained on only 3 epochs, the drawn "curve" appears to be quite linear)  
+(the figure collect metrics each poch and since the ResNet18 model was trained on only 3 epochs, the "curves" appear to be quite linear)  
 - While ResNet18 performed effectively on the dataset with reliable metrics, it may not necessarily be consistent to correctly predict real-world handwritten digits. Therefore, these metrics should be interpreted with caution.
 
 ### Comparison
