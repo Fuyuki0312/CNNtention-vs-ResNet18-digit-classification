@@ -74,7 +74,7 @@ The dataset was manually inspected and cleaned to improve quality:
 - Some digits are visually similar (e.g., 0, 6, 8, 9), which introduces ambiguity
 
 ### Data Augmentation  
-Heavy transformations (e.g., random rotation, large scaling) were avoided to preserve digit structure. However, some transformations are available in `train.py` in commentary form, meaning that they can be enabled by deleting sharp symbols "#". For more detailed, you can take a further look at `train.py`.
+Some heavy transformations (e.g., random rotation, large scaling) were avoided to preserve digit structure. However, some transformations are available in `train.py` in commentary form, meaning that they can be enabled by deleting sharp symbols "#" based-on your needs. For more detailed, you can take a further look at `train.py`.
 
 
 ## How to use the models
