@@ -26,7 +26,7 @@ Given the limited size of the dataset in this project, CNN is considered a more 
 
 This project uses a custom dataset of handwritten digits (0–9).  
 The original dataset: https://www.kaggle.com/datasets/olafkrastovski/handwritten-digits-0-9  
-Total images: approximately 20000 images with each label has about 2000 images  
+Total images: approximately 20000 images with about 1886 images of label 9 and about 2100 for other labels  
 
 ### 3.1. Data Cleaning  
 
@@ -60,13 +60,16 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 
 ![description](Images/CNNAccuracyCurve.jpg) ![description](Images/CNNLossCurve.jpg)
 ![description](Images/CNNConfusionMatrix.jpg)  
-(Confusion matrix collected model's prediction during validation after finishing training)
+
 - The model sometimes confuses digits like 0, 3, 6, 8, and 9 due to similar rounded shapes and different handwritting styles.  
 
 ### 5.2. CNNtention
-- The CNNtention model was built based on Non-attention CNN model's architecture but with attention mechanisms, reaching 97.15% test accuracy.
+- The CNNtention model was built based on Non-attention CNN model's architecture but with attention mechanisms, reaching 97.15% test accuracy.  
+  
 ![description](Images/CNNtentionAccuracyCurve.jpg) ![description](Images/CNNtentionLossCurve.jpg)
 ![description](Images/CNNtentionConfusionMatrix.jpg)  
+
+- The CNNtention model effectively classifies nearly all labels compared to the Non-attention CNN model above, though the CNNtention model still sometimes misclassifies 9 to 8. This may due to the fact that the number of image 9 is smaller than the number of other images in the custom dataset (section 3).
 
 ### 5.3. Pretrained ResNet18
 - The model reached 99.62% test accuracy.  
