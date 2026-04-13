@@ -8,7 +8,13 @@ A comparative study of attention-augmented CNN (CNNtention) and ResNet18 for han
 - Mechanism: Transformer Attention  
 
 
-## 2. Why choosing CNN
+## 2. Background
+
+### 2.1. Inspiration
+This project is inspired by the paper **"CNNtention: Can CNNs do better with Attention?"** (Glattki, Kapila & Rathi, 2024) [[arXiv:2412.11657](https://arxiv.org/abs/2412.11657)].  
+I adapt their approach of integrating attention mechanisms into CNN architectures for the task of handwritten digit classification.  
+
+### 2.2. Why choosing CNN
 CNN models are a strong baseline in image classification because of their ability to learn local spacial features effectively, and perform sufficiently even with a small dataset.  
 
 In contrast, Vision Transformer (ViT) models, while outperform CNN models thanks to global dependencies, require significantly more data and computational resources to train effectively.  
