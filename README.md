@@ -119,7 +119,7 @@ Note: before following the instruction below, you may want to go to folder `CNN 
 ├── 8/  
 └── 9/  
 - If you want to use the models only for inference, you can import the models from `model.py` (and also `self_attention.py` for CNNtention) with weights loaded from `ModelDetectingNumber.pth`.
-- Beisides, `PlotConfusionMatrix.py` can be used to plot confusion matrix for the current model with weights loaded from `ModelDetectingNumber.pth`.  
+- Besides, `PlotConfusionMatrix.py` can be used to plot confusion matrix for the current model with weights loaded from `ModelDetectingNumber.pth`.  
 
 
 ## 7. Limitation and Possible Improvements
