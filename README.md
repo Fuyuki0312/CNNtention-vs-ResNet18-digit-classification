@@ -72,8 +72,8 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 
 Due to very long training time (section 5.4), I decided to train that CNNtention model again but with images resized to 45x70 from 90x140 and reached 97.15% test accuracy.  
   
-![description](Images/CNNtentionAccuracyCurve.jpg) ![description](Images/CNNtentionLossCurve.jpg)
-![description](Images/CNNtentionConfusionMatrix.jpg)  
+![description](Images/45x90CNNtentionAccuracyCurve.jpg) ![description](Images/45x90CNNtentionLossCurve.jpg)
+![description](Images/45x90CNNtentionConfusionMatrix.jpg)  
 
 - This 45x70 CNNtention model classifies nearly all labels more effectively compared to the Non-attention CNN model (section 5.1), though this CNNtention model still sometimes misclassifies 9 to 8. This may be due to the fact that the number of image 9 is smaller than the number of other images in the custom dataset (section 3) and the fact that images are resized to 45x70, reducing images' information four times.
 
