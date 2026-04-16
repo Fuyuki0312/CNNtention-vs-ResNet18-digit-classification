@@ -6,7 +6,6 @@ from torch import nn
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 from torch.utils.data import random_split
-import time
 
 # Hyperparameters --------------------------------------------
 
@@ -16,8 +15,6 @@ LEARNING_RATE = 0.00005
 TEST_AFTER_n_EPOCH = 1
 MODEL_ADDRESS = "ModelDetectingNumber.pth" # Where to save model's weights
 torch.manual_seed(42)
-
-START_TIME = int(time.time())
 
 if TEST_AFTER_n_EPOCH > TRAINING_CYCLES:
     print("WARNING: TEST_AFTER_n_EPOCH is currently bigger than TRAINING_CYCLES.")
@@ -220,9 +217,6 @@ def main():
 
     except Exception:
         pass
-
-    END_TIME = int(time.time())
-    print(END_TIME - START_TIME)
 
 # Plot loss curve --------------------------------------------------------------
 
