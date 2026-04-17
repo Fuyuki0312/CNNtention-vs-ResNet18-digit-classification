@@ -98,7 +98,7 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 
 **Key Advantages of CNNtention compared to ResNet18 and non-attention CNN in this project:**  
 - **Significantly smaller** weight size (986 KB vs 131,169 KB)
-- **3% accuracy improvement** over baseline CNN
+- **accuracy improvement** over baseline CNN
 - **Lower computational requirements on small-resized images** - suitable for low-end devices
 
 
