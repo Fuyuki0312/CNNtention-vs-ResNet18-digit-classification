@@ -56,7 +56,7 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 ## 5. Metrics
 
 ### 5.1. Non-attention CNN model built from scratch
-- The model reached 94.14% test accuracy.  
+- The model reached 96.05% test accuracy.  
 
 ![description](Images/CNNAccuracyCurve.jpg) ![description](Images/CNNLossCurve.jpg)
 ![description](Images/CNNConfusionMatrix.jpg)  
@@ -92,7 +92,7 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 ![description](Images/ComparisonTable.jpg)
 
 - Thanks to residual architecture and significantly deeper layers, the ResNet18 model resulted in a considerably high test accuracy of 98.99%, without the need of transforming data into grayscale. Similarly, the non-pretrained ResNet18 model showed reliable metrics with slightly increased total training time.
-- The non-attention CNN model built from scratch, on the other hand, reached an acceptable test accuracy (94.14%), yet required many times more epochs (50 epochs), leading to longer training time. After data had been transformed into grayscale, this model was trained at roughly 0.4 minutes per epoch, achieving about 94% test accuracy.
+- The non-attention CNN model built from scratch, on the other hand, reached an acceptable test accuracy (96.05%), yet required many times more epochs (50 epochs), leading to longer training time. After data had been transformed into grayscale, this model was trained at roughly 0.7 minutes per epoch.
 - Regarding the CNNtention models, their metrics also surpass those of the non-attention CNN model, reaching remarkably higher test accuracy (96.97% and 97.15%), but still lower than the ResNet18 models' test accuracy. This gap, however, illustrates a trade-off rather than a disadvantage. Built based on a simple architecture of the non-attention CNN model where there are not many parameters, the CNNtention model requires much fewer computational resources and has its weights stored in `ModelDetectingNumber.pth` with a much smaller size. Particularly, its model weights are stored in a much smaller file: the CNNtention's `ModelDetectingNumber.pth` is only 987 KB, whereas the ResNet18 models' file size is 131,169 KB.
 - Among the two CNNtention models, although there were differences in image size, the final metrics of these models is quite similar. Reducing image size not only helps the CNNtention model to train much faster, but also improve the performance slightly. Even though reducing image size may prevent the 45x70 model to fully observe images, it accidentally prevents the model from "wandering" around unimportant areas in images.
 
