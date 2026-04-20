@@ -95,8 +95,8 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 
 
 ## 5. Demonstration
-- A demonstration of the CNNtention model (45x70) from scratch is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/CNNtention-in-handwritten-digit-classification
-- Or for the ResNet18 model: [[ResNet18 demo](https://huggingface.co/spaces/Fuyuki0312/ResNet18-in-handwritten-digit-classification)]
+- A demonstration of the CNNtention model (45x70) from scratch is produced at HuggingFace Space: [[CNNtention-Gradio-demo](https://huggingface.co/spaces/Fuyuki0312/CNNtention-in-handwritten-digit-classification)]
+- Or for the ResNet18 model: [[ResNet18-Gradio-demo](https://huggingface.co/spaces/Fuyuki0312/ResNet18-in-handwritten-digit-classification)]
 - The Space may need a few seconds to restart if inactive. 
 - Note: Input image's background color should be white by default.  
 ![description](Images/ModelDemonstration.jpg)  
